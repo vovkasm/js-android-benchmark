@@ -55,6 +55,36 @@ Date.prototype.formatDate = function (input, time) {
     'Y',
     'z',
   ];
+  var funcs = [
+    a,
+    A,
+    B,
+    d,
+    D,
+    F,
+    g,
+    G,
+    h,
+    H,
+    i,
+    j,
+    l,
+    L,
+    m,
+    M,
+    n,
+    O,
+    r,
+    s,
+    S,
+    t,
+    U,
+    w,
+    W,
+    y,
+    Y,
+    z,
+  ];
   var daysLong = [
     'Sunday',
     'Monday',
@@ -384,7 +414,7 @@ Date.prototype.formatDate = function (input, time) {
       ia.splice(ij, 1);
     } else {
       if (arrayExists(switches, ia[ij])) {
-        ia[ij] = eval(ia[ij] + '()');
+        ia[ij] = funcs[ij]();
       }
     }
     ij++;
