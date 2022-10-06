@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, SafeAreaView, StyleSheet, View} from 'react-native';
+import {Button, SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import {JSProfile} from './suites/JSProfile';
 
 type Route = '' | '/profile-js';
@@ -22,12 +22,21 @@ type RouterProps = {
 };
 const Router = ({route, setRoute}: RouterProps) => {
   if (!route) {
+    const date = new Date();
     return (
       <>
         <Button
           title="Profile JavaScript"
           onPress={() => setRoute('/profile-js')}
         />
+        <Text>{date.toString()}</Text>
+        <Text>{date.toLocaleString()}</Text>
+        <Text>
+          {new Intl.DateTimeFormat('ja-JP', {
+            dateStyle: 'full',
+            timeStyle: 'long',
+          }).format(date)}
+        </Text>
       </>
     );
   }

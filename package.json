@@ -10,7 +10,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
-    "@vovkasm/jsc-android": "^0.0.1",
+    "@vovkasm/jsc-android": "^0.0.2",
     "jsc-android": "^294992.0.0",
     "react": "18.1.0",
     "react-native": "0.70.1"
